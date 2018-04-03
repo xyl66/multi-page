@@ -1,0 +1,26 @@
+{
+ "name": "webpack-template",
+ "version": "1.0.0",
+ "description": "webpack-template",
+ "scripts": {
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "dev": "webpack-dev-server --open --config config/webpack.config.dev.js",
+  "build": "webpack --config config/webpack.config.prod.js",
+  "start": "npm run dev"
+ },
+ "author": "sloong",
+ "license": "MIT",
+ "devDependencies": {
+  "clean-webpack-plugin": "^0.1.19",
+  "css-loader": "^0.21.0",
+  "file-loader": "^0.8.5",
+  "glob": "^7.1.2",
+  "html-webpack-plugin": "^3.1.0",
+  "style-loader": "^0.13.0",
+  "url-loader": "^0.5.7",
+  "webpack": "^1.13.1",
+  "webpack-cli": "^2.0.13",
+  "webpack-dev-server": "^1.14.1",
+  "webpack-merge": "^4.1.2"
+ }
+}
