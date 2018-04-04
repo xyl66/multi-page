@@ -25,7 +25,7 @@ const HTMLPlugins= function () {
         var filename = filePath.substring(filePath.lastIndexOf('\/') + 1, filePath.lastIndexOf('.'))
         const htmlPlugin = new HtmlWebpackPlugin({
             filename: `${filename}.html`,
-            template: filePath,
+            template: `html-withimg-loader!${filePath}`,
             chunks: [filename,'vendor'],
         });
      map.push(htmlPlugin);

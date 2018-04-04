@@ -1,4 +1,6 @@
 {
     "jquery": "js/lib/jquery.js",
-    "avalon": "js/lib/avalon.js"
+    "avalon": "js/lib/avalon.js",
+    "bootcss":"js/lib/bootstrap-3.3.7/css/bootstrap.min.css",
+    "bootjs":"js/lib/bootstrap-3.3.7/js/bootstrap.min.js"
 }

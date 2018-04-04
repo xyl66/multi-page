@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>first example</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="./js/avalon.js"></script>
+        <!-- 新 Bootstrap 核心 CSS 文件 -->
+        <link href="./bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        
+        <!-- 可选的Bootstrap主题文件（一般不使用） -->
+        <script src="./bootstrap-3.3.7/css/bootstrap-theme.css"></script>
+        
+        <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+        <script src="./jquery-1.11.3/jquery.min.js"></script>
+        
+        <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+        <script src="./bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        <script>
+            avalon.define({
+                $id: "filterBy",
+                array: ['aaaa', 'aab', 'acb', 'ccc', 'dddd'],
+                object: {a: 'aaaa', b: 'aab', c: 'acb', d: 'ccc', e: 'dddd'},
+                searchs: "a",
+                search:'a',
+                searchFn: function (el, i) {
+                    return i > 2
+                },
+                searchFn2: function (el, i) {
+                    return el.length === 4
+                },
+                searchFn3: function (el, i) {
+                    return i === 'b' || i === 1
+                },
+                loopClick: function(a, e) {
+                    this.search=a;
+                },
+            })
+        </script>
+        <div ms-controller='filterBy'>
+            <div class="dropdown">
+                <input ms-duplex='@search' type="text" class="form-control dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
+                </input>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                    <li role="presentation" ms-for='el in @array | filterBy(@search)'>
+                        <a role="menuitem" ms-click="@loopClick(el, $event)" tabindex="-1" href="#">{{el}}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>

@@ -7,8 +7,17 @@
 </head>
 
 <body>
-    <div ms-controller="avalonCtrl">
-        <h1>{{name}}</h1>
+        <img src="../asset/img/img1.png" alt="">
+    <div ms-controller='filterBy'>
+        <div class="dropdown">
+            <input ms-duplex='@search' type="text" class="form-control dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
+            </input>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                <li role="presentation" ms-for='el in @array | filterBy(@search)'>
+                    <a role="menuitem" ms-click="@loopClick(el, $event)" tabindex="-1" href="#">{{el}}</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </body>
 
