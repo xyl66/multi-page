@@ -4,7 +4,9 @@ import "bootcss";
 import "./lib/step/iF.step.css"
 import "jquery";
 import 'bootjs';
-import config from "./config"
+import config from "./config";
+import "./lib/select2/css/select2.css"
+import select2 from "./lib/select2/js/select2.js"
 var avalon = require('avalon');
 var vm=avalon.define({
     $id: "avalonCtrl",
@@ -40,5 +42,11 @@ $(function(){
     $("form").submit(function(e){
         e.preventDefault();
         window.location.href="./addSucess.html"
-      });
+    });
+    $("#faperson").select2({
+        data: config.legalPerson,
+        placeholder:'请选择',//默认文字提示
+        language: "zh-CN",//汉化
+        width:"100%"
+    })
 })

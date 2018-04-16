@@ -15,7 +15,7 @@ module.exports = webpackMerge(webpackBase,{
             errors:true,
             warnings:true
         },
-        host: '10.130.2.220',
+        host: 'localhost',
         port: 8080
     }
 });

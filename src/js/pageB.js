@@ -4,6 +4,8 @@ import "./lib/datapicker/dcalendar.picker.css"
 import "jquery";
 import "./lib/datapicker/dcalendar.picker.js"
 import 'bootjs';
+import "./lib/select2/css/select2.css"
+import select2 from "./lib/select2/js/select2.js"
 const avalon = require('avalon');
 const vm=avalon.define({
     $id: "avalonCtrl",
@@ -181,7 +183,10 @@ const vm=avalon.define({
     }
 });
 //jquery 测试
-$('#mydatepicker').dcalendarpicker({format: 'yyyy-mm-dd'}); //初始化日期选择器
-$('.fixed-icon').click(function(){
-    $('.fixed-section').toggle('slow');
+$(function(){
+    $('#mydatepicker').dcalendarpicker({format: 'yyyy-mm-dd'}); //初始化日期选择器
+    $('.fixed-icon').click(function(){
+        $('.fixed-section').toggle('slow');
+    });
+    $("#faperson").select2({width:'100%'});
 })
