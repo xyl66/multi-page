@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test avalon</title>
+</head>
+<style>
+    html {
+        font-size: 62.5%
+    }
+
+    .left {
+        /* background: yellow; */
+    }
+
+    .right {
+        /* background: tomato; */
+    }
+
+    .body {
+        margin-top: 100px;
+    }
+
+    .type {
+        text-align: center;
+    }
+
+    .type button {
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+    }
+
+    .step-2 {
+        display: none;
+    }
+
+    .control-label>span {
+        color: red;
+    }
+
+    .one-head {
+        width: 11.11111111%
+    }
+</style>
+
+<body>
+    <div class="header">
+        <img src="../asset/img/u156.jpg" alt="">
+    </div>
+    <div class="main row">
+        <div class="left col-md-2">
+            <ul class="nav nav-pills nav-stacked">
+                <li role="presentation" class="active">
+                    <a href="#">請購管理</a>
+                </li>
+                <li role="presentation">
+                    <a href="#">費用支出請購</a>
+                </li>
+                <li role="presentation">
+                    <a href="#">採購管理</a>
+                </li>
+                <li role="presentation">
+                    <a href="#">費用支出採購</a>
+                </li>
+                <li role="presentation">
+                    <a href="#">驗收管理</a>
+                </li>
+                <li role="presentation">
+                    <a href="#">費用支出驗收</a>
+                </li>
+            </ul>
+        </div>
+        <div class="right col-md-10">
+            <div class="head-section">
+                <ol class="breadcrumb">
+                    <li>
+                        <a href="#">請購管理</a>
+                    </li>
+                    <li class="active">費用支出呈核單查詢</li>
+                </ol>
+            </div>
+            <div class="main-section" ms-controller="avalonCtrl">
+                <div class="header">
+                    <ol class="ui-step ui-step-3">
+                        <li class="step-start step-done">
+                            <div class="ui-step-line"></div>
+                            <div class="ui-step-cont">
+                                <span class="ui-step-cont-number">1</span>
+                                <span class="ui-step-cont-text">填写资料</span>
+                            </div>
+                        </li>
+                        <li class="step-active">
+                            <div class="ui-step-line"></div>
+                            <div class="ui-step-cont">
+                                <span class="ui-step-cont-number">2</span>
+                                <span class="ui-step-cont-text">审核填写信息</span>
+                            </div>
+                        </li>
+                        <li class="step-end">
+                            <div class="ui-step-line"></div>
+                            <div class="ui-step-cont">
+                                <span class="ui-step-cont-number">3</span>
+                                <span class="ui-step-cont-text">完成注册</span>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+                <div class="body">
+                    <div class="step-1 row" id="step-1">
+                        <div class="type col-md-4">
+                            <button type="button" class="btn btn-primary">月度請購</button>
+                        </div>
+                        <div class="type col-md-4">
+                            <button type="button" class="btn btn-primary">專案請購</button>
+                        </div>
+                        <div class="type col-md-4">
+                            <button type="button" class="btn btn-primary">分攤性請購</button>
+                        </div>
+                    </div>
+                    <div class="step-2" id="step-2" ms-controller="avalonCtrl">
+                        <form class="form-horizontal">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="firstname" class="col-sm-4 control-label">單據號碼
+                                            <span>*</span>
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <div class="dropdown">
+                                                <input ms-duplex='@search' type="text" class="form-control dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
+                                                </input>
+                                                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                                    <li role="presentation" >
+                                                        <a role="menuitem" tabindex="-1">单据别-单据别名称</a>
+                                                    </li>
+                                                    <li role="presentation" ms-for='el in @idtype | filterBy(@fn)'>
+                                                        <a role="menuitem" ms-click="@loopClick(el.value, $event)" tabindex="1" href="#">{{el.value}}-{{el.text}}</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="firstname" class="col-sm-4 control-label">法人
+                                            <span>*</span>
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <select class="form-control">
+                                                <option ms-for='el in @array' ms-attr="{value: el.value}">{{el.text}}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="firstname" class="col-sm-4 control-label">簽核方式
+                                            <span>*</span>
+
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" id="firstname" placeholder="请输入簽核方式">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="firstname" class="col-sm-4 control-label">申請人
+                                            <span>*</span>
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" id="firstname" placeholder="请输入申請人">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="firstname" class="col-sm-4 control-label">申請部門
+                                            <span>*</span>
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" id="firstname" placeholder="请输入申請部門">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="firstname" class="col-sm-4 control-label">申請人分機
+                                            <span>*</span>
+
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" id="phone" placeholder="申請人分機">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="firstname" class="col-sm-4 control-label">採購區域
+                                            <span>*</span>
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <select class="form-control">
+                                                <option ms-for='el in @citys' ms-attr="{value: el.value}">{{el.text}}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="firstname" class="col-sm-4 control-label">採購部門
+                                            <span>*</span>
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" id="firstname" placeholder="请输入採購部門">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="firstname" class="col-sm-4 control-label">幣別
+                                            <span>*</span>
+
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <select class="form-control">
+                                                <option value="1-簽核中">1-簽核中</option>
+                                                <option value="2-退回">2-退回</option>
+                                                <option value="3-已簽核">3-已簽核</option>
+                                                <option value="4-作廢中">4-作廢中</option>
+                                                <option value="5-已作廢">5-已作廢</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label for="firstname" class="col-sm-4 control-label">費用類型
+                                            <span>*</span>
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <select class="form-control">
+                                                <option ms-for='el in @paytype' ms-attr="{value: el.value}">{{el.text}}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+
+                                </div>
+                                <div class="col-lg-4">
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="one-line" style="padding-left:15px">
+                                    <div class="form-group">
+                                        <label for="firstname" class="col-sm-4 one-head control-label">請款說明
+                                            <span>*</span>
+                                        </label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" id="firstname" placeholder="必須輸入繁體 月度請購">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="center-block">
+                                <div class="col-sm-offset-4 col-sm-2">
+                                    <button type="submit" class="btn btn-primary">保存</button>
+                                </div>
+                                <div class="col-sm-2">
+                                    <button id="back" type="button" class="btn btn-primary">返回</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+                <div class="footer"></div>
+            </div>
+        </div>
+    </div>
+    <div class="fixed fixed-right  fixed-center fixed-icon">
+            <div class="fix-main">待<br>办<br>列<br>表<span class="badge">50</span></div>
+    </div>
+    <div class="fixed fixed-right fixed-section">
+            <ul class="nav nav-pills nav-stacked" style="max-width: 260px;">
+                    <li class="active">
+                        <a href="#">
+                            <span class="badge pull-right">42</span>未送簽訂單</a>
+                        </li>
+                    <li>
+                        <a href="#"><span class="badge pull-right">42</span>已送簽未提交訂單</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="badge pull-right">3</span>未轉採購之請購單
+                        </a>
+                    </li>
+            </ul>
+    </div>
+    <footer></footer>
+</body>
+
+</html>

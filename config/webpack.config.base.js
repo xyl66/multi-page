@@ -9,7 +9,7 @@ const nodeModPath = path.resolve(__dirname, './node_modules');
 const CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
 const config = require('./config.js')
 //css
-let extractCSS = new ExtractTextPlugin('css/[name].css?[hash]')
+let extractCSS = new ExtractTextPlugin('css/[name].css?[chunkhash]')
 let cssLoader = extractCSS.extract({
     fallback: "style-loader",
     use: "css-loader"
@@ -17,11 +17,11 @@ let cssLoader = extractCSS.extract({
 module.exports = {
     entry: Object.assign(config.entries(), {
         // 用到什么公共lib（例如jquery.js），就把它加进vendor去，目的是将公用库单独提取打包
-        'vendor': ['jquery', 'avalon']
+        'vendor': ['jquery', 'avalon','bootjs']
     }),
     output: {
         path: path.join(__dirname, "../dist"),
-        filename: "[name].bundle.js"
+        filename: "[name].[chunkhash].js"
     },
     module: {
         loaders: [{
@@ -68,7 +68,7 @@ module.exports = {
         }),
         // 自动清理 dist 文件夹
         new CleanWebpackPlugin(["dist"]),
-        //添加jquery
+        //添加jquery方便引入bootStrap
         new webpack.ProvidePlugin({
             $: "jquery",
             jQuery: "jquery"

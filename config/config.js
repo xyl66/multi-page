@@ -26,7 +26,7 @@ const HTMLPlugins= function () {
         const htmlPlugin = new HtmlWebpackPlugin({
             filename: `${filename}.html`,
             template: `html-withimg-loader!${filePath}`,
-            chunks: [filename,'vendor'],
+            chunks: ['vendor',filename],
         });
      map.push(htmlPlugin);
     }

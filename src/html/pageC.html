@@ -5,7 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>test avalon</title>
-</head>
+    <script src="../js/lib/avalon.js"></script>
+        <!-- 新 Bootstrap 核心 CSS 文件 -->
+        <link href="../js/lib/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        
+        <!-- 可选的Bootstrap主题文件（一般不使用） -->
+        <script src="../js/lib/bootstrap-3.3.7/css/bootstrap-theme.css"></script>
+        <link rel="stylesheet" href="../js/lib/datapicker/dcalendar.picker.css">
+        <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+        <script src="../js/lib/jquery-1.11.3/jquery.min.js"></script>
+        
+        <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+        <script src="../js/lib/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+        <script src="../js/lib/datapicker/dcalendar.picker.js"></script>
 <style>
     .header {
         height: 100px;
@@ -21,6 +33,9 @@
         /* background: tomato; */
     }
 
+    .operate button {
+        margin-left: 5px
+    }
 </style>
 
 <body>
@@ -658,7 +673,7 @@
             </form>
             <div class="operate">
                 <button type="button" class="btn btn-primary">查询</button>
-                <a  type="button" class="btn btn-primary" href="./add.html">新增</a>
+                <button type="button" class="btn btn-primary">新增</button>
                 <button type="button" class="btn btn-primary">删除</button>
                 <button type="button" class="btn btn-primary">批锁定</button>
                 <button type="button" class="btn btn-primary">导出Excel</button>
@@ -711,26 +726,8 @@
             </div>
         </div>
     </div>
-    <div class="fixed fixed-right  fixed-center fixed-icon">
-        <div class="fix-main">待<br>办<br>列<br>表<span class="badge">50</span></div>
-    </div>
-    <div class="fixed fixed-right fixed-section">
-            <ul class="nav nav-pills nav-stacked" style="max-width: 260px;">
-                    <li class="active">
-                        <a href="#">
-                            <span class="badge pull-right">42</span>未送簽訂單</a>
-                        </li>
-                    <li>
-                        <a href="#"><span class="badge pull-right">42</span>已送簽未提交訂單</a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="badge pull-right">3</span>未轉採購之請購單
-                        </a>
-                    </li>
-            </ul>
-    </div>
     <footer></footer>
+    <script src="../js/pageC.js"></script>
 </body>
 
 </html>

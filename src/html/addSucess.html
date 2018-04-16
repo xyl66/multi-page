@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test avalon</title>
+</head>
+<style>
+    .left {
+        /* background: yellow; */
+    }
+
+    .right {
+        /* background: tomato; */
+    }
+
+    .operate button,
+    .operate a {
+        margin-left: 5px
+    }
+    .one-head {
+        width: 11.11111111%
+    }
+</style>
+
+<body>
+    <div class="header">
+        <img src="../asset/img/u156.jpg" alt="">
+    </div>
+    <div class="main row">
+        <div class="left col-md-2">
+            <ul class="nav nav-pills nav-stacked">
+                <li role="presentation" class="active">
+                    <a href="#">請購管理</a>
+                </li>
+                <li role="presentation">
+                    <a href="#">費用支出請購</a>
+                </li>
+                <li role="presentation">
+                    <a href="#">採購管理</a>
+                </li>
+                <li role="presentation">
+                    <a href="#">費用支出採購</a>
+                </li>
+                <li role="presentation">
+                    <a href="#">驗收管理</a>
+                </li>
+                <li role="presentation">
+                    <a href="#">費用支出驗收</a>
+                </li>
+            </ul>
+        </div>
+        <div class="right col-md-10">
+            <div class="head-section">
+                <ol class="breadcrumb">
+                    <li>
+                        <a href="#">請購管理</a>
+                    </li>
+                    <li class="active">費用支出呈核單查詢</li>
+                </ol>
+            </div>
+            <div class="main-section">
+                <div class="header">
+                    <ol class="ui-step ui-step-3">
+                        <li class="step-start step-done">
+                            <div class="ui-step-line"></div>
+                            <div class="ui-step-cont">
+                                <span class="ui-step-cont-number">1</span>
+                                <span class="ui-step-cont-text">填写资料</span>
+                            </div>
+                        </li>
+                        <li class="step-done">
+                            <div class="ui-step-line"></div>
+                            <div class="ui-step-cont">
+                                <span class="ui-step-cont-number">2</span>
+                                <span class="ui-step-cont-text">审核填写信息</span>
+                            </div>
+                        </li>
+                        <li class="step-end step-active">
+                            <div class="ui-step-line"></div>
+                            <div class="ui-step-cont">
+                                <span class="ui-step-cont-number">3</span>
+                                <span class="ui-step-cont-text">完成注册</span>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+                <form class="select-section form-horizontal">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="firstname" class="col-sm-4 control-label">單據號碼</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="firstname" placeholder="请输入單據號碼" value="0CEN-180001" disabled>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="firstname" class="col-sm-4 control-label">法人</label>
+                                <div class="col-sm-8">
+                                    <select class="form-control" disabled>
+                                        <option value="000001-鴻富錦外銷(深圳)">000001-鴻富錦外銷(深圳)</option>
+                                        <option value="000002-富金獨資(新科目)">000002-富金獨資(新科目)</option>
+                                        <option value="000003-富士鈞獨資(新科目)">000003-富士鈞獨資(新科目)</option>
+                                        <option value="000004-數碼捷豹公司(內銷)">000004-數碼捷豹公司(內銷)</option>
+                                        <option value="000005-富泰康獨資(新科目)">000005-富泰康獨資(新科目)</option>
+                                        <option value="000006-華科立獨資(新科目)">000006-華科立獨資(新科目)</option>
+                                        <option value="000007-富錦順獨資(新科目)">000007-富錦順獨資(新科目)</option>
+                                        <option value="000008-富輝鋼獨資(新科目)">000008-富輝鋼獨資(新科目)</option>
+                                        <option value="000009-富士康北京獨資">000009-富士康北京獨資</option>
+                                        <option value="000010-富弘獨資(新科目)">000010-富弘獨資(新科目)</option>
+                                        <option value="000011-明塑獨資(新科目)">000011-明塑獨資(新科目)</option>
+                                        <option value="000012-富頂獨資(新科目)">000012-富頂獨資(新科目)</option>
+                                        <option value="000013-富泰嘉獨資(新科目)">000013-富泰嘉獨資(新科目)</option>
+                                        <option value="000014-鵬鼎控股（深圳）股份有限公司">000014-鵬鼎控股（深圳）股份有限公司</option>
+                                        <option value="000015-富柏獨資(新科目)">000015-富柏獨資(新科目)</option>
+                                        <option value="000016-富士康精密組件(深圳)有限公司">000016-富士康精密組件(深圳)有限公司</option>
+                                        <option value="000017-富鴻揚獨資(sap)">000017-富鴻揚獨資(sap)</option>
+                                        <option value="000018-鴻準獨資(新科目)">000018-鴻準獨資(新科目)</option>
+                                        <option value="000019-富士康物業發展(深圳)">000019-富士康物業發展(深圳)</option>
+                                        <option value="000020-富思科培訓中心">000020-富思科培訓中心</option>
+                                        <option value="000021-富思科网絡科技">000021-富思科网絡科技</option>
+                                        <option value="000022-富士康物業開發(深圳)">000022-富士康物業開發(深圳)</option>
+                                        <option value="000023-富晉獨資(新科目)">000023-富晉獨資(新科目)</option>
+                                        <option value="000024-鴻富錦創投(新科目)">000024-鴻富錦創投(新科目)</option>
+                                        <option value="000025-華建十五處(新科目)">000025-華建十五處(新科目)</option>
+                                        <option value="000026-鴻揚創投(新科目)">000026-鴻揚創投(新科目)</option>
+                                        <option value="000027-傳傑精密">000027-傳傑精密</option>
+                                        <option value="000028-光旭輝獨資(新科目)">000028-光旭輝獨資(新科目)</option>
+                                        <option value="000029-富准獨資(新科目)">000029-富准獨資(新科目)</option>
+                                        <option value="000030-訊峰實業">000030-訊峰實業</option>
+                                        <option value="000031-深圳富泰宏">000031-深圳富泰宏</option>
+                                        <option value="000031case-深圳富泰宏">000031case-深圳富泰宏</option>
+                                        <option value="000031test-深圳富泰宏test">000031test-深圳富泰宏test</option>
+                                        <option value="000031test1-深圳富泰宏">000031test1-深圳富泰宏</option>
+                                        <option value="000032-鴻富晉工業(太原)獨資">000032-鴻富晉工業(太原)獨資</option>
+                                        <option value="000033-前瞻">000033-前瞻</option>
+                                        <option value="000034-鴻富泰精密電子(煙臺)有限公司">000034-鴻富泰精密電子(煙臺)有限公司</option>
+                                        <option value="000036-群康">000036-群康</option>
+                                        <option value="000037-競爭視訊">000037-競爭視訊</option>
+                                        <option value="000038-龍崗長城建筑">000038-龍崗長城建筑</option>
+                                        <option value="000039-富鴻康科技(深圳)有限公司">000039-富鴻康科技(深圳)有限公司</option>
+                                        <option value="000040-富晉太原分廠">000040-富晉太原分廠</option>
+                                        <option value="000041-科創网絡">000041-科創网絡</option>
+                                        <option value="000042-東莞宏松">000042-東莞宏松</option>
+                                        <option value="000043-宏華勝(煙台)">000043-宏華勝(煙台)</option>
+                                        <option value="000045-富鴻傑獨資">000045-富鴻傑獨資</option>
+                                        <option value="000046-富泰通獨資">000046-富泰通獨資</option>
+                                        <option value="000047-富泰通武漢">000047-富泰通武漢</option>
+                                        <option value="000048-鴻富錦武漢(新科目)">000048-鴻富錦武漢(新科目)</option>
+                                        <option value="000049-宏群勝(營口)">000049-宏群勝(營口)</option>
+                                        <option value="000050-宏恆勝(淮安)">000050-宏恆勝(淮安)</option>
+                                        <option value="000051-鵬智科技">000051-鵬智科技</option>
+                                        <option value="000052-富士康良田大連">000052-富士康良田大連</option>
+                                        <option value="000053-鴻富錦精密電子(煙臺)有限公司">000053-鴻富錦精密電子(煙臺)有限公司</option>
+                                        <option value="000054-鴻富錦山西">000054-鴻富錦山西</option>
+                                        <option value="000055-宏啟勝(秦皇島)">000055-宏啟勝(秦皇島)</option>
+                                        <option value="000056-南寧富寧">000056-南寧富寧</option>
+                                        <option value="000057-鴻富強(營口)">000057-鴻富強(營口)</option>
+                                        <option value="000058-上海國基">000058-上海國基</option>
+                                        <option value="000059-上海國璉">000059-上海國璉</option>
+                                        <option value="000060-富士康(昆山)">000060-富士康(昆山)</option>
+                                        <option value="000061-富士康電子工業(昆山)">000061-富士康電子工業(昆山)</option>
+                                        <option value="000062-宏業精密組件(昆山)">000062-宏業精密組件(昆山)</option>
+                                        <option value="000063-富翔精密工業(昆山)有限公司">000063-富翔精密工業(昆山)有限公司</option>
+                                        <option value="000064-康准電子科技(昆山)有限公司">000064-康准電子科技(昆山)有限公司</option>
+                                        <option value="000065-鴻准精密模具(昆山)有限公司">000065-鴻准精密模具(昆山)有限公司</option>
+                                        <option value="000066-富鈺精密組件(昆山)">000066-富鈺精密組件(昆山)</option>
+                                        <option value="000067-富瑞精密組件(昆山)有限公司">000067-富瑞精密組件(昆山)有限公司</option>
+                                        <option value="000068-富曜精密組件(昆山)">000068-富曜精密組件(昆山)</option>
+                                        <option value="000069-安泰汽車(昆山)">000069-安泰汽車(昆山)</option>
+                                        <option value="000070-富准精密模具(淮安)">000070-富准精密模具(淮安)</option>
+                                        <option value="000071-富譽電子科技(淮安)">000071-富譽電子科技(淮安)</option>
+                                        <option value="000072-淮安電插">000072-淮安電插</option>
+                                        <option value="000073-淮安名揚房地產">000073-淮安名揚房地產</option>
+                                        <option value="000074-淮安市富利通">000074-淮安市富利通</option>
+                                        <option value="000075-富星電子(淮安)">000075-富星電子(淮安)</option>
+                                        <option value="000076-富士康(南京)軟件">000076-富士康(南京)軟件</option>
+                                        <option value="000077-富臨電子科技(常熟)有限公司">000077-富臨電子科技(常熟)有限公司</option>
+                                        <option value="000078-富揚電子科技(常熟)">000078-富揚電子科技(常熟)</option>
+                                        <option value="000079-富鼎電子科技(嘉善)有限公司">000079-富鼎電子科技(嘉善)有限公司</option>
+                                        <option value="000080-上海富泰通">000080-上海富泰通</option>
+                                        <option value="000081-富泰華深圳">000081-富泰華深圳</option>
+                                        <option value="000087-名揚房地產">000087-名揚房地產</option>
+                                        <option value="000091-普立華">000091-普立華</option>
+                                        <option value="000092-普麗">000092-普麗</option>
+                                        <option value="000093-鑫龍房地產">000093-鑫龍房地產</option>
+                                        <option value="000094-深圳富華杰">000094-深圳富華杰</option>
+                                        <option value="000096-富駿材料">000096-富駿材料</option>
+                                        <option value="000100-富泰華成商貿">000100-富泰華成商貿</option>
+                                        <option value="000101-富泰通(煙台)">000101-富泰通(煙台)</option>
+                                        <option value="000102-富準精密(煙台)">000102-富準精密(煙台)</option>
+                                        <option value="000103-煙台祥任電子有限公司">000103-煙台祥任電子有限公司</option>
+                                        <option value="000104-富利通(煙台)">000104-富利通(煙台)</option>
+                                        <option value="000105-鴻富錦重慶">000105-鴻富錦重慶</option>
+                                        <option value="000106-鴻富錦嘉善">000106-鴻富錦嘉善</option>
+                                        <option value="000107-富泰通(重慶)">000107-富泰通(重慶)</option>
+                                        <option value="000108-煙台富士康">000108-煙台富士康</option>
+                                        <option value="000109-富鴻康(廣州)">000109-富鴻康(廣州)</option>
+                                        <option value="000110-富智康精密電子(廊坊)有限公司">000110-富智康精密電子(廊坊)有限公司</option>
+                                        <option value="000111-統合電子(杭州)有限公司">000111-統合電子(杭州)有限公司</option>
+                                        <option value="000112-群康科技(重慶)有限公司">000112-群康科技(重慶)有限公司</option>
+                                        <option value="000113-富迅通貿易">000113-富迅通貿易</option>
+                                        <option value="000114-全億大科技(佛山)">000114-全億大科技(佛山)</option>
+                                        <option value="000115-群康電子(昆山)">000115-群康電子(昆山)</option>
+                                        <option value="000116-捷達世軟件">000116-捷達世軟件</option>
+                                        <option value="000117-南寧富貴">000117-南寧富貴</option>
+                                        <option value="000117-2-鴻富錦(天津)">000117-2-鴻富錦(天津)</option>
+                                        <option value="000118-富泰華(鄭州)">000118-富泰華(鄭州)</option>
+                                        <option value="000119-鴻富錦(鄭州)">000119-鴻富錦(鄭州)</option>
+                                        <option value="000120-基準精密(惠州)">000120-基準精密(惠州)</option>
+                                        <option value="000121-鴻富錦成都">000121-鴻富錦成都</option>
+                                        <option value="000122-冠鼎建築">000122-冠鼎建築</option>
+                                        <option value="000123-富鼎精密(鄭州)">000123-富鼎精密(鄭州)</option>
+                                        <option value="000124-富駿電子(重慶)">000124-富駿電子(重慶)</option>
+                                        <option value="000125-順德基順精密">000125-順德基順精密</option>
+                                        <option value="000126-富士康精密電子(太原)有限公司">000126-富士康精密電子(太原)有限公司</option>
+                                        <option value="000127-安品達(惠州)">000127-安品達(惠州)</option>
+                                        <option value="000128-鴻天智永科技">000128-鴻天智永科技</option>
+                                        <option value="000129-群康(成都)公司">000129-群康(成都)公司</option>
+                                        <option value="000130-準時達(成都)">000130-準時達(成都)</option>
+                                        <option value="000131-盛天精密(成都)">000131-盛天精密(成都)</option>
+                                        <option value="000132-準時到國際物流">000132-準時到國際物流</option>
+                                        <option value="000133-睿志達(深圳)">000133-睿志達(深圳)</option>
+                                        <option value="000134-南寧富桂">000134-南寧富桂</option>
+                                        <option value="000135-富泰華(成都)">000135-富泰華(成都)</option>
+                                        <option value="000136-南寧富泰宏精密">000136-南寧富泰宏精密</option>
+                                        <option value="000137-宏訊工業(杭州)">000137-宏訊工業(杭州)</option>
+                                        <option value="000138-重慶冠卓科技">000138-重慶冠卓科技</option>
+                                        <option value="000139-成都市富連網貿易有限公司">000139-成都市富連網貿易有限公司</option>
+                                        <option value="000140-AMB Logistics Ltd">000140-AMB Logistics Ltd</option>
+                                        <option value="000141-鴻富錦精密工業(深圳)有限公司長沙研發分公司">000141-鴻富錦精密工業(深圳)有限公司長沙研發分公司</option>
+                                        <option value="000142-衡陽領航科技有限公司">000142-衡陽領航科技有限公司</option>
+                                        <option value="000143-鴻富錦內銷">000143-鴻富錦內銷</option>
+                                        <option value="000144-重慶市鴻慶鑫精密電子有限公司">000144-重慶市鴻慶鑫精密電子有限公司</option>
+                                        <option value="000146-衡陽勝添精密電子有限公司">000146-衡陽勝添精密電子有限公司</option>
+                                        <option value="000147-天津富納源創科技有限公司">000147-天津富納源創科技有限公司</option>
+                                        <option value="000148-鑫龍房地產開發(太原)">000148-鑫龍房地產開發(太原)</option>
+                                        <option value="000149-鴻兆達(昆山)">000149-鴻兆達(昆山)</option>
+                                        <option value="000150-富泰京北京">000150-富泰京北京</option>
+                                        <option value="000151-三營超光電">000151-三營超光電</option>
+                                        <option value="000152-重慶鴻道富科技">000152-重慶鴻道富科技</option>
+                                        <option value="000153-三贏科技（深圳）有限公司">000153-三贏科技（深圳）有限公司</option>
+                                        <option value="000154-上海安亞">000154-上海安亞</option>
+                                        <option value="000155-重慶鴻富準">000155-重慶鴻富準</option>
+                                        <option value="000156-鄭州市富連網電子科技有限公司">000156-鄭州市富連網電子科技有限公司</option>
+                                        <option value="000157-江西新海洋">000157-江西新海洋</option>
+                                        <option value="000158-鄭州準時達物流有限公司">000158-鄭州準時達物流有限公司</option>
+                                        <option value="000159-富昱置業(上海)">000159-富昱置業(上海)</option>
+                                        <option value="000160-上海富士康">000160-上海富士康</option>
+                                        <option value="000161-上海華捷">000161-上海華捷</option>
+                                        <option value="000162-富泰華新都分公司">000162-富泰華新都分公司</option>
+                                        <option value="000163-北海國鈺">000163-北海國鈺</option>
+                                        <option value="000164-富昱能源(昆山)">000164-富昱能源(昆山)</option>
+                                        <option value="000165-鴻泰精密(杭州)">000165-鴻泰精密(杭州)</option>
+                                        <option value="000166-睿志達(成都)">000166-睿志達(成都)</option>
+                                        <option value="000174-富湘云文化有限公司">000174-富湘云文化有限公司</option>
+                                        <option value="000175-南陽富豫">000175-南陽富豫</option>
+                                        <option value="000176-富泰華精密(濟源)">000176-富泰華精密(濟源)</option>
+                                        <option value="000177-業成(成都)">000177-業成(成都)</option>
+                                        <option value="000178-業成(深圳)">000178-業成(深圳)</option>
+                                        <option value="000179-富士康工會聯合會">000179-富士康工會聯合會</option>
+                                        <option value="000180-贛州新海洋">000180-贛州新海洋</option>
+                                        <option value="000181-鑫成(成都)">000181-鑫成(成都)</option>
+                                        <option value="000182-富士康集團總工會">000182-富士康集團總工會</option>
+                                        <option value="000183-聯誠康物流">000183-聯誠康物流</option>
+                                        <option value="000184-富士康(沈陽)精密工業有限公司">000184-富士康(沈陽)精密工業有限公司</option>
+                                        <option value="000188-富士康集團衡陽工會">000188-富士康集團衡陽工會</option>
+                                        <option value="000194-原瑞電池">000194-原瑞電池</option>
+                                        <option value="000195-普立華工會">000195-普立華工會</option>
+                                        <option value="000196-富士康(太原)工會">000196-富士康(太原)工會</option>
+                                        <option value="000197-富士康晉城工會">000197-富士康晉城工會</option>
+                                        <option value="000198-成都富士康工會">000198-成都富士康工會</option>
+                                        <option value="000199-富士康鄭州工會">000199-富士康鄭州工會</option>
+                                        <option value="000200-富士康武漢工會">000200-富士康武漢工會</option>
+                                        <option value="000202-富士康北京工會">000202-富士康北京工會</option>
+                                        <option value="000203-富士康重慶工會">000203-富士康重慶工會</option>
+                                        <option value="000204-富士康煙台工會">000204-富士康煙台工會</option>
+                                        <option value="000205-富昱能源(阜寧)">000205-富昱能源(阜寧)</option>
+                                        <option value="000206-富華達(煙台)">000206-富華達(煙台)</option>
+                                        <option value="000207-富能新能源(南陽)">000207-富能新能源(南陽)</option>
+                                        <option value="000208-富泰京(煙台)">000208-富泰京(煙台)</option>
+                                        <option value="000209-鴻富錦衡陽外銷">000209-鴻富錦衡陽外銷</option>
+                                        <option value="000210-哈爾濱捷達世">000210-哈爾濱捷達世</option>
+                                        <option value="000212-天津杰達世">000212-天津杰達世</option>
+                                        <option value="000213-衡陽鵬智科技有限公司">000213-衡陽鵬智科技有限公司</option>
+                                        <option value="000214-富鴻源(深圳)">000214-富鴻源(深圳)</option>
+                                        <option value="000215-富友萬得(武漢)商貿有限公司">000215-富友萬得(武漢)商貿有限公司</option>
+                                        <option value="000216-鴻汗鄂爾多斯市">000216-鴻汗鄂爾多斯市</option>
+                                        <option value="000217-富友萬得(武漢)">000217-富友萬得(武漢)</option>
+                                        <option value="000218-鄭州富昱程農業生物">000218-鄭州富昱程農業生物</option>
+                                        <option value="000219-鄭州富昱盛能源科技">000219-鄭州富昱盛能源科技</option>
+                                        <option value="000220-天津雅貝(未上線，如需上線需填寫資訊服務申請單)">000220-天津雅貝(未上線，如需上線需填寫資訊服務申請單)</option>
+                                        <option value="000221-睿智達深圳外銷(未上線，如需上線需填寫資訊服務申請單)">000221-睿智達深圳外銷(未上線，如需上線需填寫資訊服務申請單)</option>
+                                        <option value="000222-睿智達東莞(未上線，如需上線需填寫資訊服務申請單)">000222-睿智達東莞(未上線，如需上線需填寫資訊服務申請單)</option>
+                                        <option value="000223-鄭州市富連網電子科技有限公司深圳分公司">000223-鄭州市富連網電子科技有限公司深圳分公司</option>
+                                        <option value="000224-富準精密鶴壁">000224-富準精密鶴壁</option>
+                                        <option value="000225-衡陽富泰宏精密工業有限公司">000225-衡陽富泰宏精密工業有限公司</option>
+                                        <option value="000226-深圳市富能新能源科技有限公司">000226-深圳市富能新能源科技有限公司</option>
+                                        <option value="000227-富士康科技集團南寧科技園工會委員會">000227-富士康科技集團南寧科技園工會委員會</option>
+                                        <option value="000228-嘉善鑫揚房地產">000228-嘉善鑫揚房地產</option>
+                                        <option value="000229-武漢飛虎樂購">000229-武漢飛虎樂購</option>
+                                        <option value="000230-富士康精密電子(廊坊)有限公司工會委員會">000230-富士康精密電子(廊坊)有限公司工會委員會</option>
+                                        <option value="000231-鄭州市萬馬電子科技有限公司武漢分公司">000231-鄭州市萬馬電子科技有限公司武漢分公司</option>
+                                        <option value="000232-富金機網絡科技(河南)有限公司">000232-富金機網絡科技(河南)有限公司</option>
+                                        <option value="000233-富士康先進製造生產力培訓學院 ">000233-富士康先進製造生產力培訓學院 </option>
+                                        <option value="000234-新海洋江西工會">000234-新海洋江西工會</option>
+                                        <option value="000235-昆山萬馬雲商貿有限公司">000235-昆山萬馬雲商貿有限公司</option>
+                                        <option value="000236-深圳富金機網絡科技有限公司">000236-深圳富金機網絡科技有限公司</option>
+                                        <option value="000237-">000237-</option>
+                                        <option value="000238-">000238-</option>
+                                        <option value="000239-">000239-</option>
+                                        <option value="000240-深圳基準精密工業有限公司">000240-深圳基準精密工業有限公司</option>
+                                        <option value="000241-濟源科技園工會">000241-濟源科技園工會</option>
+                                        <option value="000242-富泰康電子研發(煙台)有限公司">000242-富泰康電子研發(煙台)有限公司</option>
+                                        <option value="000243-富能成都分公司">000243-富能成都分公司</option>
+                                        <option value="000244-業成科技(鄭州)有限公司">000244-業成科技(鄭州)有限公司</option>
+                                        <option value="000245-湖南富連網貿易有限公司">000245-湖南富連網貿易有限公司</option>
+                                        <option value="000246-富晉康獨資">000246-富晉康獨資</option>
+                                        <option value="000247-鄭州聯誠康">000247-鄭州聯誠康</option>
+                                        <option value="000248-衡陽領航科技外銷">000248-衡陽領航科技外銷</option>
+                                        <option value="000249-普麗科技">000249-普麗科技</option>
+                                        <option value="000250-河南中原融創基金管理">000250-河南中原融創基金管理</option>
+                                        <option value="000251-河南中原融資租賃有限">000251-河南中原融資租賃有限</option>
+                                        <option value="000252-成都成富人力資源管理有限公司">000252-成都成富人力資源管理有限公司</option>
+                                        <option value="000253-富能鄭州分公司">000253-富能鄭州分公司</option>
+                                        <option value="000254-深圳市富能EMC">000254-深圳市富能EMC</option>
+                                        <option value="000255-山西萬馬云電子科技有限公司">000255-山西萬馬云電子科技有限公司</option>
+                                        <option value="000256-鄭州永揚檢測服務有限公司">000256-鄭州永揚檢測服務有限公司</option>
+                                        <option value="000257-富鴻源(深圳)環保科技有限公司成都分公司">000257-富鴻源(深圳)環保科技有限公司成都分公司</option>
+                                        <option value="000258-鄭州市富連網電子科技有限公司重慶分公司">000258-鄭州市富連網電子科技有限公司重慶分公司</option>
+                                        <option value="000259-鄭州市捷達世信息技術">000259-鄭州市捷達世信息技術</option>
+                                        <option value="000260-淮安園區工會">000260-淮安園區工會</option>
+                                        <option value="000261-威雄精機科技(深圳)">000261-威雄精機科技(深圳)</option>
+                                        <option value="000262-富華達精密(貴州)">000262-富華達精密(貴州)</option>
+                                        <option value="000263-貴州富連網">000263-貴州富連網</option>
+                                        <option value="000266-富士康(松江)科技工業園工會委員會">000266-富士康(松江)科技工業園工會委員會</option>
+                                        <option value="000267-成都市富育技能培訓中心">000267-成都市富育技能培訓中心</option>
+                                        <option value="000268-昆山園區工會">000268-昆山園區工會</option>
+                                        <option value="000269-基准濟源">000269-基准濟源</option>
+                                        <option value="000270-富士康科技集團嘉善科技園工會委員會">000270-富士康科技集團嘉善科技園工會委員會</option>
+                                        <option value="000271-鄭州市訊捷貿易">000271-鄭州市訊捷貿易</option>
+                                        <option value="000272-成都科泰華捷">000272-成都科泰華捷</option>
+                                        <option value="000273-深圳市智聯云網科技有限公司">000273-深圳市智聯云網科技有限公司</option>
+                                        <option value="000274-杭州園區工會">000274-杭州園區工會</option>
+                                        <option value="000275-富貴康精密電子(貴州)有限公司">000275-富貴康精密電子(貴州)有限公司</option>
+                                        <option value="000276-貴州富納源創科技有限公司">000276-貴州富納源創科技有限公司</option>
+                                        <option value="000283-鴻道富廣州分公司">000283-鴻道富廣州分公司</option>
+                                        <option value="000284-鴻富職業煙臺">000284-鴻富職業煙臺</option>
+                                        <option value="000285-西安萬馬云">000285-西安萬馬云</option>
+                                        <option value="000286-瀋陽市富連網電子科技有限公司">000286-瀋陽市富連網電子科技有限公司</option>
+                                        <option value="000287-淮安鴻裕電子科技有限公司">000287-淮安鴻裕電子科技有限公司</option>
+                                        <option value="000288-淮安慶鼎精密獨資帳">000288-淮安慶鼎精密獨資帳</option>
+                                        <option value="000289-淮安裕鼎精密獨資帳">000289-淮安裕鼎精密獨資帳</option>
+                                        <option value="000290-盤縣富貴康">000290-盤縣富貴康</option>
+                                        <option value="000291-煙台富訊通">000291-煙台富訊通</option>
+                                        <option value="000292-富泰捷科技發展(深圳)有限公司">000292-富泰捷科技發展(深圳)有限公司</option>
+                                        <option value="000293-富士康精密電子(煙台)有限公司八角分廠">000293-富士康精密電子(煙台)有限公司八角分廠</option>
+                                        <option value="000295-煙台萬馬電子科技有限公司">000295-煙台萬馬電子科技有限公司</option>
+                                        <option value="000296-貴州富迅通貿易有限公司">000296-貴州富迅通貿易有限公司</option>
+                                        <option value="000297-富智康精密組件(北京)有限公司">000297-富智康精密組件(北京)有限公司</option>
+                                        <option value="000298-福士瑞(濟源)">000298-福士瑞(濟源)</option>
+                                        <option value="000299-富士康科技集團天津科技園工會聯合會">000299-富士康科技集團天津科技園工會聯合會</option>
+                                        <option value="000301-">000301-</option>
+                                        <option value="010000-淮安騰躍信息">010000-淮安騰躍信息</option>
+                                        <option value="010001-南陽鴻富錦">010001-南陽鴻富錦</option>
+                                        <option value="010003-重慶璟鎂精">010003-重慶璟鎂精</option>
+                                        <option value="010004-富迅通北京分公司">010004-富迅通北京分公司</option>
+                                        <option value="010005-北京富夏電子商務有限公司">010005-北京富夏電子商務有限公司</option>
+                                        <option value="010006-深圳市飛虎信息技術">010006-深圳市飛虎信息技術</option>
+                                        <option value="010007-富迅通上海分公司">010007-富迅通上海分公司</option>
+                                        <option value="010008-成都飛虎樂購">010008-成都飛虎樂購</option>
+                                        <option value="010009-鄭州市富迅通">010009-鄭州市富迅通</option>
+                                        <option value="010010-鄭州市萬馬">010010-鄭州市萬馬</option>
+                                        <option value="010011-福建省萬馬">010011-福建省萬馬</option>
+                                        <option value="010012-鄭州萬馬">010012-鄭州萬馬</option>
+                                        <option value="010013-湖南萬雲電子科技">010013-湖南萬雲電子科技</option>
+                                        <option value="010014-廣州萬屏云馬">010014-廣州萬屏云馬</option>
+                                        <option value="010015-南陽萬馬">010015-南陽萬馬</option>
+                                        <option value="010016-鄭州萬馬云電子科技有限公司">010016-鄭州萬馬云電子科技有限公司</option>
+                                        <option value="010017-廊坊市富連網商貿有限">010017-廊坊市富連網商貿有限</option>
+                                        <option value="010018-上海富鴻">010018-上海富鴻</option>
+                                        <option value="010020-富智康鄭州">010020-富智康鄭州</option>
+                                        <option value="010021-重慶市鴻騰科技有限公司">010021-重慶市鴻騰科技有限公司</option>
+                                        <option value="010022-濟源基準精密電子有限公司">010022-濟源基準精密電子有限公司</option>
+                                        <option value="010025-鄭州富豫職業培訓學校">010025-鄭州富豫職業培訓學校</option>
+                                        <option value="010026-安徽鴻慶">010026-安徽鴻慶</option>
+                                        <option value="010027-深圳富華科">010027-深圳富華科</option>
+                                        <option value="010028-鶴壁工會">010028-鶴壁工會</option>
+                                        <option value="010029-富盟菏澤">010029-富盟菏澤</option>
+                                        <option value="010030-富智康南京">010030-富智康南京</option>
+                                        <option value="010031-佛山富華科">010031-佛山富華科</option>
+                                        <option value="010032-福士瑞精密工業(鄭州)有限公司">010032-福士瑞精密工業(鄭州)有限公司</option>
+                                        <option value="010033-昆山富成科">010033-昆山富成科</option>
+                                        <option value="010034-廣西富連網">010034-廣西富連網</option>
+                                        <option value="010035-杭州富連網">010035-杭州富連網</option>
+                                        <option value="010036-成都准刃科技有限公司">010036-成都准刃科技有限公司</option>
+                                        <option value="010037-成都準刃加工">010037-成都準刃加工</option>
+                                        <option value="010038-晉城鴻刃">010038-晉城鴻刃</option>
+                                        <option value="010039-晉城鴻刃加工">010039-晉城鴻刃加工</option>
+                                        <option value="010040-鄭州鴻刃獨資">010040-鄭州鴻刃獨資</option>
+                                        <option value="010042-基準精密工業(惠州)有限公司深圳觀瀾分公司">010042-基準精密工業(惠州)有限公司深圳觀瀾分公司</option>
+                                        <option value="010043-基準惠州觀瀾分公司HH">010043-基準惠州觀瀾分公司HH</option>
+                                        <option value="010044-基準精密工業(惠州)有限公司深圳龍華分公司">010044-基準精密工業(惠州)有限公司深圳龍華分公司</option>
+                                        <option value="010045-基準惠州龍華分公司HH">010045-基準惠州龍華分公司HH</option>
+                                        <option value="010046-富士康工會惠州">010046-富士康工會惠州</option>
+                                        <option value="010047-武漢市富連網商貿有限公司">010047-武漢市富連網商貿有限公司</option>
+                                        <option value="010048-鴻富準深圳">010048-鴻富準深圳</option>
+                                        <option value="010049-福士瑞成都">010049-福士瑞成都</option>
+                                        <option value="010051-福士瑞晉城">010051-福士瑞晉城</option>
+                                        <option value="010052-賜福安慶">010052-賜福安慶</option>
+                                        <option value="010053-正一深圳">010053-正一深圳</option>
+                                        <option value="010054-貴州超微通通訊科技有限公司">010054-貴州超微通通訊科技有限公司</option>
+                                        <option value="010055-衡陽富連网商貿有限公司">010055-衡陽富連网商貿有限公司</option>
+                                        <option value="010056-貴州富智康精密電子有限公司">010056-貴州富智康精密電子有限公司</option>
+                                        <option value="010057-鴻富錦(鄭州航空港)">010057-鴻富錦(鄭州航空港)</option>
+                                        <option value="010059-訊捷深圳">010059-訊捷深圳</option>
+                                        <option value="010060-富連網山西">010060-富連網山西</option>
+                                        <option value="010061-河南御品">010061-河南御品</option>
+                                        <option value="010062-富成科煙臺">010062-富成科煙臺</option>
+                                        <option value="010063-深圳金機虎">010063-深圳金機虎</option>
+                                        <option value="010064-深圳市鴻兆達">010064-深圳市鴻兆達</option>
+                                        <option value="010065-貴州黔譽汽車">010065-貴州黔譽汽車</option>
+                                        <option value="010066-準時達武漢">010066-準時達武漢</option>
+                                        <option value="010067-貴州園區工會">010067-貴州園區工會</option>
+                                        <option value="010068-北京富连商贸有限公司">010068-北京富连商贸有限公司</option>
+                                        <option value="010069-國基電子商務(嘉善)有限公司">010069-國基電子商務(嘉善)有限公司</option>
+                                        <option value="010070-深圳精基">010070-深圳精基</option>
+                                        <option value="010071-淮安鴻富錦">010071-淮安鴻富錦</option>
+                                        <option value="010072-淮安富連網">010072-淮安富連網</option>
+                                        <option value="010073-河南豫譽 ">010073-河南豫譽 </option>
+                                        <option value="010074-鄭州精基成都分公司">010074-鄭州精基成都分公司</option>
+                                        <option value="010075-鴻富錦精密電子(貴陽)有限公司">010075-鴻富錦精密電子(貴陽)有限公司</option>
+                                        <option value="010076-富華科精密工業(深圳)有限公司(內銷)">010076-富華科精密工業(深圳)有限公司(內銷)</option>
+                                        <option value="010077-鄭州精基昆山分公司">010077-鄭州精基昆山分公司</option>
+                                        <option value="010078-昆明富利通">010078-昆明富利通</option>
+                                        <option value="010079-杭州鴻富創新">010079-杭州鴻富創新</option>
+                                        <option value="010080-杭州飛虎樂購">010080-杭州飛虎樂購</option>
+                                        <option value="010081-深圳富之富">010081-深圳富之富</option>
+                                        <option value="010082-富泰樂商貿成都">010082-富泰樂商貿成都</option>
+                                        <option value="010083-鴻富勝鄭州加工">010083-鴻富勝鄭州加工</option>
+                                        <option value="010084-鴻富勝鄭州">010084-鴻富勝鄭州</option>
+                                        <option value="010085-淮安鴻富錦">010085-淮安鴻富錦</option>
+                                        <option value="010086-淮安富啟">010086-淮安富啟</option>
+                                        <option value="010087-河南裕展">010087-河南裕展</option>
+                                        <option value="010088-河南正一特殊材料">010088-河南正一特殊材料</option>
+                                        <option value="010089-蘭州富泰華工貿有限公司">010089-蘭州富泰華工貿有限公司</option>
+                                        <option value="010090-山東準時達">010090-山東準時達</option>
+                                        <option value="010091-深圳市前海準時達供應鏈管理有限公司">010091-深圳市前海準時達供應鏈管理有限公司</option>
+                                        <option value="010092-金機虎深圳">010092-金機虎深圳</option>
+                                        <option value="010093-廊坊市準時達物流有限公司">010093-廊坊市準時達物流有限公司</option>
+                                        <option value="010094-優爾材料工業(深圳)有限公司">010094-優爾材料工業(深圳)有限公司</option>
+                                        <option value="010095-重慶鴻富準">010095-重慶鴻富準</option>
+                                        <option value="010096-鄭州精基精密機械貿易有限公司廊坊分公司">010096-鄭州精基精密機械貿易有限公司廊坊分公司</option>
+                                        <option value="010097-山西極致精密光機有限公司">010097-山西極致精密光機有限公司</option>
+                                        <option value="010098-鴻富錦精密電子(濟源)有限公司">010098-鴻富錦精密電子(濟源)有限公司</option>
+                                        <option value="010099-廊富北京分公司">010099-廊富北京分公司</option>
+                                        <option value="010100-富譽新能源汽車服務有限公司">010100-富譽新能源汽車服務有限公司</option>
+                                        <option value="010101-">010101-</option>
+                                        <option value="010102-(">010102-(</option>
+                                        <option value="010103-煙臺飛虎樂購信息科技有限公司">010103-煙臺飛虎樂購信息科技有限公司</option>
+                                        <option value="010104-煙台市富利通商貿有限公司深圳分公司">010104-煙台市富利通商貿有限公司深圳分公司</option>
+                                        <option value="010105-金機虎精密機械(武漢)有限公司">010105-金機虎精密機械(武漢)有限公司</option>
+                                        <option value="010107-菏澤園區工會">010107-菏澤園區工會</option>
+                                        <option value="010108-廈門市富連網電子科技有限公司">010108-廈門市富連網電子科技有限公司</option>
+                                        <option value="010111-東風安泰(十堰)">010111-東風安泰(十堰)</option>
+                                        <option value="010112-東風安泰(武漢)">010112-東風安泰(武漢)</option>
+                                        <option value="010113-數碼捷豹工程結報系統">010113-數碼捷豹工程結報系統</option>
+                                        <option value="010114-深圳市富誠工業有">010114-深圳市富誠工業有</option>
+                                        <option value="010115-富華科貴洲">010115-富華科貴洲</option>
+                                        <option value="010116-凱里富利通">010116-凱里富利通</option>
+                                        <option value="010117-鴻富晉美金帳">010117-鴻富晉美金帳</option>
+                                        <option value="010118-富士康贛州工會">010118-富士康贛州工會</option>
+                                        <option value="010119-富士康工會在沈陽">010119-富士康工會在沈陽</option>
+                                        <option value="010120-秦皇島富士康培訓學院">010120-秦皇島富士康培訓學院</option>
+                                        <option value="010121-富士康秦皇島">010121-富士康秦皇島</option>
+                                        <option value="010122-富士康太原美金帳">010122-富士康太原美金帳</option>
+                                        <option value="010123-富泰華深圳美金帳">010123-富泰華深圳美金帳</option>
+                                        <option value="010124-富泰通南寧分公司">010124-富泰通南寧分公司</option>
+                                        <option value="010125-富晉WW">010125-富晉WW</option>
+                                        <option value="010126-富豫多媒體">010126-富豫多媒體</option>
+                                        <option value="010127-富友萬得深圳">010127-富友萬得深圳</option>
+                                        <option value="010128-富譽新能源汽車">010128-富譽新能源汽車</option>
+                                        <option value="010129-貴超光電貴陽">010129-貴超光電貴陽</option>
+                                        <option value="010130-光伏發電渾源">010130-光伏發電渾源</option>
+                                        <option value="010131-光伏發電天鎮">010131-光伏發電天鎮</option>
+                                        <option value="010132-光伏發電陽高">010132-光伏發電陽高</option>
+                                        <option value="010133-東莞宏松">010133-東莞宏松</option>
+                                        <option value="010134-國鈺總帳外銷">010134-國鈺總帳外銷</option>
+                                        <option value="010135-鴻富晉(太原)榆次分廠">010135-鴻富晉(太原)榆次分廠</option>
+                                        <option value="010136-鴻富錦內交">010136-鴻富錦內交</option>
+                                        <option value="010137-鴻富錦武漢內交">010137-鴻富錦武漢內交</option>
+                                        <option value="010138-鴻富錦成都美金帳">010138-鴻富錦成都美金帳</option>
+                                        <option value="010139-鴻富錦濟源">010139-鴻富錦濟源</option>
+                                        <option value="010140-鴻富錦秦皇島">010140-鴻富錦秦皇島</option>
+                                        <option value="010141-鴻富錦鄭州專帳">010141-鴻富錦鄭州專帳</option>
+                                        <option value="010142-鴻富錦鄭州美金帳">010142-鴻富錦鄭州美金帳</option>
+                                        <option value="010143-海源合金獨資">010143-海源合金獨資</option>
+                                        <option value="010144-INFOCUS深圳">010144-INFOCUS深圳</option>
+                                        <option value="010145-河南佳港實業">010145-河南佳港實業</option>
+                                        <option value="010146-杭州準時達">010146-杭州準時達</option>
+                                        <option value="010147-鉅億深圳">010147-鉅億深圳</option>
+                                        <option value="010148-秦皇島蓮蓬俱樂部">010148-秦皇島蓮蓬俱樂部</option>
+                                        <option value="010149-河南茂發">010149-河南茂發</option>
+                                        <option value="010150-明塑加工">010150-明塑加工</option>
+                                        <option value="010151-鵬龍房地產晉城">010151-鵬龍房地產晉城</option>
+                                        <option value="010152-群康昆山(獨資)">010152-群康昆山(獨資)</option>
+                                        <option value="010153-深超光電">010153-深超光電</option>
+                                        <option value="010154-數碼捷豹廣州分公司">010154-數碼捷豹廣州分公司</option>
+                                        <option value="010155-數碼捷豹華強北分公司">010155-數碼捷豹華強北分公司</option>
+                                        <option value="010156-富葵周結資料庫">010156-富葵周結資料庫</option>
+                                        <option value="010157-富鴻康周結資料庫">010157-富鴻康周結資料庫</option>
+                                        <option value="010158-富泰華周結資料庫">010158-富泰華周結資料庫</option>
+                                        <option value="010159-淮安宏恆勝周結資料庫">010159-淮安宏恆勝周結資料庫</option>
+                                        <option value="010160-鴻富錦成都周結資料庫">010160-鴻富錦成都周結資料庫</option>
+                                        <option value="010161-宏華勝周結資料庫">010161-宏華勝周結資料庫</option>
+                                        <option value="010162-宏啟勝周結資料庫">010162-宏啟勝周結資料庫</option>
+                                        <option value="010163-宏群勝周結資料庫">010163-宏群勝周結資料庫</option>
+                                        <option value="010164-傳杰周結資料庫">010164-傳杰周結資料庫</option>
+                                        <option value="010165-訊峰成都周結資料庫">010165-訊峰成都周結資料庫</option>
+                                        <option value="010166-蘭考裕德包裝">010166-蘭考裕德包裝</option>
+                                        <option value="010167-蘭考裕展精密">010167-蘭考裕展精密</option>
+                                        <option value="010168-群楊科技天津">010168-群楊科技天津</option>
+                                        <option value="010169-SINO VISION VENTURES">010169-SINO VISION VENTURES</option>
+                                        <option value="010170-群楊科技深圳分公司">010170-群楊科技深圳分公司</option>
+                                        <option value="010171-MEGAFONE LIMITED(BY)">010171-MEGAFONE LIMITED(BY)</option>
+                                        <option value="010172-MEGAFZHK">010172-MEGAFZHK</option>
+                                        <option value="010173-超微通深圳">010173-超微通深圳</option>
+                                        <option value="010174-北京富運科技有限公司">010174-北京富運科技有限公司</option>
+                                        <option value="010175-廊坊超微通">010175-廊坊超微通</option>
+                                        <option value="010176-群康昆山(獨資)">010176-群康昆山(獨資)</option>
+                                        <option value="010177-安泰方盛電氣系統">010177-安泰方盛電氣系統</option>
+                                        <option value="010178-富泰通南寧">010178-富泰通南寧</option>
+                                        <option value="010180-富士康(昆山)">010180-富士康(昆山)</option>
+                                        <option value="010181-富士康電子工業(昆山)">010181-富士康電子工業(昆山)</option>
+                                        <option value="010182-康准電子科技(昆山)有限公司">010182-康准電子科技(昆山)有限公司</option>
+                                        <option value="010183-富譽電子科技(淮安)">010183-富譽電子科技(淮安)</option>
+                                        <option value="010184-富鼎精密(鄭州)">010184-富鼎精密(鄭州)</option>
+                                        <option value="010185-重慶市鴻騰科技有限公司">010185-重慶市鴻騰科技有限公司</option>
+                                        <option value="010186-富泰京精密(北京)">010186-富泰京精密(北京)</option>
+                                        <option value="010187-富智康精密電子(廊坊)有限公司">010187-富智康精密電子(廊坊)有限公司</option>
+                                        <option value="010188-富盟菏澤">010188-富盟菏澤</option>
+                                        <option value="010189-富頂獨資(新科目)">010189-富頂獨資(新科目)</option>
+                                        <option value="010190-贛州新海洋">010190-贛州新海洋</option>
+                                        <option value="010191-江西新海洋">010191-江西新海洋</option>
+                                        <option value="010192-南京鴻富夏精密電子有限公司">010192-南京鴻富夏精密電子有限公司</option>
+                                        <option value="010193-鴻慶工會">010193-鴻慶工會</option>
+                                        <option value="A086060-益富可視(深圳)">A086060-益富可視(深圳)</option>
+                                        <option value="A086129-上海國宙">A086129-上海國宙</option>
+                                        <option value="A086141-廊坊富泰通">A086141-廊坊富泰通</option>
+                                        <option value="A086292-深圳富泰樂">A086292-深圳富泰樂</option>
+                                        <option value="A086341-富聯雲天津">A086341-富聯雲天津</option>
+                                        <option value="A086385-鄭州富超">A086385-鄭州富超</option>
+                                        <option value="A086432-杭州準時達">A086432-杭州準時達</option>
+                                        <option value="A086436-富陽南陽">A086436-富陽南陽</option>
+                                        <option value="A086440-晉城富泰華">A086440-晉城富泰華</option>
+                                        <option value="A086445-富夢網深圳">A086445-富夢網深圳</option>
+                                        <option value="A086449-蘭考裕富">A086449-蘭考裕富</option>
+                                        <option value="A086450-蘭考裕德 ">A086450-蘭考裕德 </option>
+                                        <option value="A086454-杭州浙譽">A086454-杭州浙譽</option>
+                                        <option value="A086457-上海上譽">A086457-上海上譽</option>
+                                        <option value="A086458-煙臺市富利通太原分公司">A086458-煙臺市富利通太原分公司</option>
+                                        <option value="A086461-鴻富錦凱里">A086461-鴻富錦凱里</option>
+                                        <option value="A086463-優爾工業材料(廊坊)有限公司">A086463-優爾工業材料(廊坊)有限公司</option>
+                                        <option value="A086465-重慶富渝勝">A086465-重慶富渝勝</option>
+                                        <option value="A086468-丹江口富昇">A086468-丹江口富昇</option>
+                                        <option value="A086471-深圳市裕展精密科技有限公司">A086471-深圳市裕展精密科技有限公司</option>
+                                        <option value="A086474-鹽田準時達">A086474-鹽田準時達</option>
+                                        <option value="A086475-鄭州逸凱">A086475-鄭州逸凱</option>
+                                        <option value="A086477-貴州富華科">A086477-貴州富華科</option>
+                                        <option value="A086479-優爾工業材料(昆山)有限公司">A086479-優爾工業材料(昆山)有限公司</option>
+                                        <option value="A086481-湖南富連網望城分公司">A086481-湖南富連網望城分公司</option>
+                                        <option value="A086482-廊坊裕展">A086482-廊坊裕展</option>
+                                        <option value="A086483-富利通鄭州">A086483-富利通鄭州</option>
+                                        <option value="A086487-富利通南陽">A086487-富利通南陽</option>
+                                        <option value="A086488-昆山好管家物業有限公司">A086488-昆山好管家物業有限公司</option>
+                                        <option value="A086489-富泰通天津分公司">A086489-富泰通天津分公司</option>
+                                        <option value="A086509-上海準時達">A086509-上海準時達</option>
+                                        <option value="A086517-煙台市富利通商貿有限公司貴陽分公司">A086517-煙台市富利通商貿有限公司貴陽分公司</option>
+                                        <option value="A086518-東莞市富翼精密工業有限公司">A086518-東莞市富翼精密工業有限公司</option>
+                                        <option value="A086522-西安富連網">A086522-西安富連網</option>
+                                        <option value="A086524-江西安亞">A086524-江西安亞</option>
+                                        <option value="A086525-富準（瀋陽）">A086525-富準（瀋陽）</option>
+                                        <option value="A086526-南寧富昇">A086526-南寧富昇</option>
+                                        <option value="A086536-淮安準時達">A086536-淮安準時達</option>
+                                        <option value="A086537-深圳安亞">A086537-深圳安亞</option>
+                                        <option value="A086538-太原準時達">A086538-太原準時達</option>
+                                        <option value="A086541-佰昌科技(天津)">A086541-佰昌科技(天津)</option>
+                                        <option value="A086544-湖南準時達">A086544-湖南準時達</option>
+                                        <option value="A086548-前海裕展（深圳）">A086548-前海裕展（深圳）</option>
+                                        <option value="A086552-晉城裕展">A086552-晉城裕展</option>
+                                        <option value="A086554-河南富馳">A086554-河南富馳</option>
+                                        <option value="A086557-超視土界國際">A086557-超視土界國際</option>
+                                        <option value="A086570-重慶富桂">A086570-重慶富桂</option>
+                                        <option value="A086571-鄭州裕騰">A086571-鄭州裕騰</option>
+                                        <option value="A086578-深圳富桂 ">A086578-深圳富桂 </option>
+                                        <option value="A086582-山西裕鼎">A086582-山西裕鼎</option>
+                                        <option value="A852080-富連網香港">A852080-富連網香港</option>
+                                        <option value="B086028-昆山鑫揚">B086028-昆山鑫揚</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="firstname" class="col-sm-4 control-label">簽核方式
+                                    <span>*</span>
+
+                                </label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="firstname" placeholder="请输入簽核方式" disabled value="000001-鴻富錦外銷(深圳)">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="firstname" class="col-sm-4 control-label">申請人
+                                    <span>*</span>
+                                </label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="firstname" placeholder="请输入申請人" value="测试申请人" disabled>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="firstname" class="col-sm-4 control-label">申請部門
+                                    <span>*</span>
+                                </label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="firstname" placeholder="请输入申請部門" value="DB49-财会资讯" disabled>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="firstname" class="col-sm-4 control-label">申請人分機
+                                    <span>*</span>
+
+                                </label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="phone" placeholder="申請人分機" value="560-12345" disabled>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="firstname" class="col-sm-4 control-label">採購區域
+                                    <span>*</span>
+                                </label>
+                                <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="phone" placeholder="申請人分機" value="深圳" disabled>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="firstname" class="col-sm-4 control-label">採購部門
+                                    <span>*</span>
+                                </label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="firstname" placeholder="请输入採購部門" value="DB49-财会资讯" disabled>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="firstname" class="col-sm-4 control-label">幣別
+                                    <span>*</span>
+
+                                </label>
+                                <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="firstname" placeholder="请输入採購部門" value="RMB-人民币" disabled>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label for="firstname" class="col-sm-4 control-label">費用類型
+                                    <span>*</span>
+                                </label>
+                                <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="firstname" placeholder="请输入採購部門" value="Common+公司費用" disabled>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+
+                        </div>
+                        <div class="col-lg-4">
+                                <div class="form-group">
+                                        <label for="firstname" class="col-sm-4 control-label">申请日期
+                                            <span>*</span>
+                                        </label>
+                                        <div class="col-sm-8">
+                                                <input type="text" class="form-control" id="firstname" placeholder="请输入採購部門" value="2018/3/27" disabled>
+                                        </div>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="one-line" style="padding-left:15px">
+                            <div class="form-group">
+                                <label for="firstname" class="col-sm-4 one-head control-label">請款說明
+                                    <span>*</span>
+                                </label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="firstname" placeholder="必須輸入繁體 月度請購" disabled>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            </form>
+            <div class="operate">
+                <button type="button" class="btn btn-primary">修改</button>
+                <a type="button" class="btn btn-primary" href="./add.html">删除</a>
+                <button type="button" class="btn btn-primary">确认</button>
+                <button type="button" class="btn btn-primary" disabled>取消确认</button>
+                <button type="button" class="btn btn-primary" disabled>审核</button>
+                <button type="button" class="btn btn-primary" disabled>取消审核</button>
+                <button type="button" class="btn btn-primary" disabled>锁定</button>
+                <button type="button" class="btn btn-primary" disabled>取消锁定</button>
+                <button type="button" class="btn btn-primary" disabled>作废单身</button>
+                <button type="button" class="btn btn-primary" disabled>转采购</button>
+            </div>
+            <div class="table-section" ms-controller="avalonCtrl">
+                <table class="table table-bordered">
+                    <caption>边框表格布局</caption>
+                    <thead>
+                        <tr>
+                            <th>
+                                序号
+                            </th>
+                            <th>
+                                <input type="checkbox" ms-duplex-checked="@allchecked" data-duplex-changed="@checkAll" />
+                            </th>
+                            <th>單據號碼</th>
+                            <th>法人</th>
+                            <th>申請部門</th>
+                            <th>申請人</th>
+                            <th>申請日期</th>
+                            <th>幣別</th>
+                            <th>總金額</th>
+                            <th>單據狀態</th>
+                            <th>是否鎖定</th>
+                            <th>創建人</th>
+                            <th>採購狀態</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ms-for="($index, el) in @datas">
+                            <td>{{$index}}</td>
+                            <td>
+                                <input type="checkbox" ms-duplex-checked="el.checked" data-duplex-changed="@checkOne" />
+                            </td>
+                            <td>{{el.id}}</td>
+                            <td>{{el.person}}</td>
+                            <td>{{el.depart}}</td>
+                            <td>{{el.uname}}</td>
+                            <td>{{el.date}}</td>
+                            <td>{{el.moneytype}}</td>
+                            <td>{{el.money}}</td>
+                            <td>{{el.status}}</td>
+                            <td>{{el.islock}}</td>
+                            <td>{{el.cname}}</td>
+                            <td>{{el.cstatus}}</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="fixed fixed-right  fixed-center fixed-icon">
+            <div class="fix-main">待<br>办<br>列<br>表<span class="badge">50</span></div>
+    </div>
+    <div class="fixed fixed-right fixed-section">
+            <ul class="nav nav-pills nav-stacked" style="max-width: 260px;">
+                    <li class="active">
+                        <a href="#">
+                            <span class="badge pull-right">42</span>未送簽訂單</a>
+                        </li>
+                    <li>
+                        <a href="#"><span class="badge pull-right">42</span>已送簽未提交訂單</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="badge pull-right">3</span>未轉採購之請購單
+                        </a>
+                    </li>
+            </ul>
+    </div>
+    <footer></footer>
+</body>
+
+</html>

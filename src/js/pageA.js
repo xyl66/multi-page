@@ -5,7 +5,7 @@ import '../css/pageA.css'
 var avalon = require('avalon');
 avalon.define({
     $id: "filterBy",
-    array: ['aaaa', 'aab', 'acb', 'ccc', 'dddd'],
+    array: ['aaaa', 'aabb', 'acb', 'ccc', 'dddd'],
     object: {a: 'aaaa', b: 'aab', c: 'acb', d: 'ccc', e: 'dddd'},
     searchs: "a",
     search:'a',
